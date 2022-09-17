@@ -92,7 +92,7 @@ background : blue;
 
 
 @media (min-width:640px){
-    .accordion .accordion-button{
+    .accordion .accordion-button, .card button{
         background : transparent;
         padding-right : 40px;
     }

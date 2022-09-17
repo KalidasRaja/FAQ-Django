@@ -20,7 +20,7 @@ def base(request):
             search_key_faq = Faq_QA.objects.filter(translations__category_Option=category_filter).order_by('-id')
         else:
             search_key_faq = Faq_QA.objects.all().order_by('-id').order_by('-id')
-    paginator = Paginator(search_key_faq, 2)
+    paginator = Paginator(search_key_faq, 7)
     page_num = request.GET.get('page', 1)
     search_key_faq = paginator.page(page_num)
 

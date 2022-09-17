@@ -162,13 +162,13 @@
                     <div class=" py-3 p-md-4">
                         <div class="accordion" id="accordionExample">
                             {% block content %}
-                        {% for search in search_data reversed %}
+                        {% for search in search_data %}
                             <div class="card position-relative">
                               <div class="card-body">
                                 <h5 class="card-title">
                                     <form action="{% url 'faq_view' %}" method="get">
                                         <input type="hidden" name="faq_viewer_id" value="{{search.id}}">
-                                        <button type="submit" class="border-0 bg-transparent">{{search.question_Title}}</button>
+                                        <button type="submit" class="border-0 bg-transparent text-start">{{search.question_Title}}</button>
                                     </form>
                                 </h5>
                                 <p class="card-text">{{search.question_Description | truncatechars:100 }}</p>
