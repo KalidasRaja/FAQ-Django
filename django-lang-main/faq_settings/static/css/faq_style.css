@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.cc-bg-blue-100{
+    background-color : #F1F7FF;
+}
+
+.cc-text-blue-100{
+    color : #808CA1;
+}
+
+.cc-text-blue-200{
+    color : #667E8E;
+}
+
+.cc-pl-40{
+    padding-left : 40px;
+}
+.max-w-xs{
+    max-width : 540px;
+    margin : 0 auto;
+    padding : 0 20px;
+}
+
+.accordion .accordion-body{
+    text-align : justify;
+    font-size : 14px;
+    color : #808CA1;
+}
+
+.accordion .accordion-button{
+    background : transparent;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.links a, .languages li a{
+    color : #515354;
+    text-decoration : none;
+    width : 100%;
+}
+
+.languages li a{
+    display : flex;
+    padding : 5px 16px;
+}
+
+.languages li:hover, .languages li a:hover, .cc-pagination a.page-link:hover{
+    color : white;
+    text-decoration : underline;
+}
+
+.languages li a.language-active, .active a{
+    color : white;
+}
+
+.languages .dropdown-item:has(> a.language-active), .cc-pagination .page-item.active, .dropdown-item:hover {
+background : blue;
+}
+
+.accordion button::after {
+  content: "";
+  display : none;
+}
+
+.accordion .accordion-header i::before{
+    width : 20px;
+    height : 20px;
+}
+
+.card button:hover, .card button:focus {
+    color: blue;
+    text-decoration: underline;
+}
+
+
+@media (min-width:640px){
+    .accordion .accordion-button{
+        background : transparent;
+        padding-right : 40px;
+    }
+}

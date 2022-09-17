@@ -1,0 +1,10 @@
+{% extends 'master.html' %}
+{% block title %}Faq : {{faq_detail.title_Question}}{% endblock %}
+
+{% block content%}
+
+    <div class="container">
+        {{faq_detail.question_Title}}
+        {{faq_detail.question_Description}}
+    </div>
+{% endblock %}
