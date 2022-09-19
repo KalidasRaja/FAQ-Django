@@ -10,7 +10,7 @@ def base(request):
         q = request.GET['q']
         multiple_keywords_faq = Q(
             Q(translations__question_Title__icontains=q) |
-            Q(translations__question_Description__icontains=q) |
+            # Q(translations__question_Description__icontains=q) |
             Q(translations__SEO_Keywords__icontains=q)
         )
         search_key_faq = Faq_QA.objects.filter(multiple_keywords_faq).order_by('-id')
@@ -20,7 +20,7 @@ def base(request):
             search_key_faq = Faq_QA.objects.filter(translations__category_Option=category_filter).order_by('-id')
         else:
             search_key_faq = Faq_QA.objects.all().order_by('-id').order_by('-id')
-    paginator = Paginator(search_key_faq, 2)
+    paginator = Paginator(search_key_faq, 5)
     page_num = request.GET.get('page', 1)
     search_key_faq = paginator.page(page_num)
 
