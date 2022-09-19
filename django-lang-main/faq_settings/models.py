@@ -22,7 +22,7 @@ class Faq_QA(TranslatableModel):
     translations = TranslatedFields(
         question_Title=models.CharField(max_length=500, db_index=True),
         question_Description=models.TextField(blank=True),
-        category_Option=models.ForeignKey(Category, on_delete=models.CASCADE),
+        category_Option=models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True),
         SEO_Keywords=models.TextField(blank=True),
         views=models.ManyToManyField(IpModel, related_name="faq_views", blank=True)
     )

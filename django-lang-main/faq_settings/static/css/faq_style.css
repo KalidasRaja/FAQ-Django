@@ -90,6 +90,17 @@ background : blue;
     text-decoration: underline;
 }
 
+.category a{
+    color: #515354;
+    text-decoration : none
+}
+
+.category a:hover, .category a:focus, .category a:active,
+.links a:hover, .links a:focus{
+    color: blue;
+    text-decoration: underline;
+}
+
 
 @media (min-width:640px){
     .accordion .accordion-button, .card button{
